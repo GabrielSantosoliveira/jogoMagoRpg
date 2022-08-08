@@ -1,7 +1,10 @@
 import {useState} from "react"
+import { useRouter } from "next/router"
+import { useRecoilState } from "recoil"
+import{magoSelecionado} from"../src/atom"
 export default function Home() {
 
-  const[magoSelecionado,setMagoSlecionado] = useState({})
+  const[magoSelecionadoState,setMagoSlecionado] = useRecoilState(magoSelecionado)
 
   const MagosPersonagems = [{
     nome: "alberto",
@@ -20,13 +23,16 @@ export default function Home() {
     id:"3"
   }]
 
+  const rota = useRouter()
 
   const selecionarMago = (mago) =>{
 
     setMagoSlecionado(mago)
     
 
-    alert(`o mago que vc selecionou foi, ${mago.nome}`)
+    alert(`o mago que vc selecionou foi ${mago.nome},para continuar click OK`)
+
+    rota.push("luta")
 
   }
 
