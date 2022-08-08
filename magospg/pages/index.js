@@ -4,23 +4,28 @@ import { useRecoilState } from "recoil"
 import{magoSelecionado} from"../src/atom"
 export default function Home() {
 
+ 
+
   const[magoSelecionadoState,setMagoSlecionado] = useRecoilState(magoSelecionado)
 
   const MagosPersonagems = [{
     nome: "alberto",
     tipo: "fogo",
     foto: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.AdbdB1XcTyEtrUbEAwoi5wHaG7%26pid%3DApi&f=1",
-    id:"1"
-  }, {
-    nome: "francisco",
-    tipo: "água",
-    foto: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.4gN0nbT2JIMtvxm-xlQtuwHaFu%26pid%3DApi&f=1 ",
-    id:"2"
-  }, {
-    nome: "pedro",
-    tipo: "terra",
-    foto: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.5SqDOncJPPWctyIlIjcLzwHaEK%26pid%3DApi&f=1",
-    id:"3"
+    id:"1",
+      vida:500
+    }, {
+      nome: "francisco",
+      tipo: "água",
+      foto: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.4gN0nbT2JIMtvxm-xlQtuwHaFu%26pid%3DApi&f=1 ",
+      id:"2",
+      vida:500
+    }, {
+      nome: "pedro",
+      tipo: "terra",
+      foto: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.5SqDOncJPPWctyIlIjcLzwHaEK%26pid%3DApi&f=1",
+      id:"3",
+      vida:500
   }]
 
   const rota = useRouter()
