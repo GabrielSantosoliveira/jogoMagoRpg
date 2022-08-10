@@ -1,0 +1,1 @@
+export default function Derrota () { return (<h1> voce perdeu</h1>)}

@@ -1,0 +1,1 @@
+export default function Vitoria () { return (<h1> voce venceu</h1>)}
